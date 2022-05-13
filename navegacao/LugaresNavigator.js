@@ -10,8 +10,12 @@ const Stack = createNativeStackNavigator()
 
 const container = (
     <NavigationContainer>
-        <Stack.Navigator>
-            <Stack.Screen initialRouteName="ListaDeLugares"/>
+        <Stack.Navigator 
+            initialRouteName="ListaDeLugares"
+            screenOptions={{
+                headerStyle: {backgroundColor: Cores.primary},
+                headerTintColor: 'white'
+            }}>
             <Stack.Screen name="DetalhesDoLugar" component={DetalhesDoLugarTela}/>
             <Stack.Screen name="ListaDeLugares" component={ListaDeLugaresTela}/>
             <Stack.Screen name="Mapa" component={MapaTela}/>
@@ -19,3 +23,5 @@ const container = (
         </Stack.Navigator>
     </NavigationContainer>
 )
+
+export default container
